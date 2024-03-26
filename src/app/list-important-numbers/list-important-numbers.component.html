@@ -1,0 +1,19 @@
+<div>
+  <div class="flex flex-wrap justify-center">
+    <div *ngFor="let contacto of contactos" class="mb-4 mx-4">
+      <a
+        [attr.href]="'tel:' + contacto.telefono"
+        class="flex flex-col items-center"
+      >
+        <ion-card
+          class="item-container flex rounded-full border-4 border-[#000000]"
+        >
+          <ion-card-content class="card-content" [class]="contacto.color">
+            <img [src]="contacto.icon" [alt]="contacto.nombre" class="w-full h-full"/>
+          </ion-card-content>
+        </ion-card>
+        <ion-label class="movil">{{ contacto.nombre }}</ion-label>
+      </a>
+    </div>
+  </div>
+</div>
